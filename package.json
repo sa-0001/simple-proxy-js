@@ -1,0 +1,24 @@
+{
+  "name": "@sa0001/simple-proxy",
+  "version": "0.0.12",
+  "author": "sa0001",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sa-0001/simple-proxy-js.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "rm -rf ./dist ; mkdir ./dist ; coffee --bare --output ./dist --compile ./src",
+    "publish": "npm run prepare ; npm publish --access public",
+    "test": "node ./dist/test.js"
+  },
+  "devDependencies": {
+    "@sa0001/wrap-tap": "^0.0.11",
+    "coffeescript": "^1.12.7"
+  },
+  "dependencies": {
+    "@sa0001/type-of": "^0.0.7",
+    "lodash": "^4.17.4"
+  }
+}
